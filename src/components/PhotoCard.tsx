@@ -13,6 +13,11 @@ interface PhotoCardProps {
 }
 
 export const PhotoCard = ({ photo }: PhotoCardProps) => {
+  const handleImageError = (e: React.SyntheticEvent<HTMLImageElement>) => {
+    // Fallback to a placeholder if image fails to load
+    e.currentTarget.src = `https://placehold.co/150x150/667eea/white?text=Photo+${photo.id}`;
+  };
+
   return (
     <Card
       sx={{
@@ -31,6 +36,7 @@ export const PhotoCard = ({ photo }: PhotoCardProps) => {
         height="200"
         image={photo.thumbnailUrl}
         alt={photo.title}
+        onError={handleImageError}
         sx={{
           objectFit: 'cover',
           backgroundColor: '#f5f5f5'
