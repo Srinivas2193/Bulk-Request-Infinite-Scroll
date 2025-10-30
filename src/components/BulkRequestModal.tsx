@@ -82,19 +82,19 @@ export const BulkRequestModal = ({ open, onClose, photos }: BulkRequestModalProp
   <meta charset="UTF-8">
   <style>
     body { font-family: Calibri, Arial, sans-serif; font-size: 11pt; color: #333; }
-    table { border-collapse: collapse; width: 100%; margin: 20px 0; table-layout: fixed; }
+    table { border-collapse: collapse; width: 100%; margin: 20px 0; }
     th, td { border: 1px solid #999; padding: 8px; text-align: left; word-wrap: break-word; }
-    th { font-weight: bold; color: #333; }
+    th { font-weight: bold; color: #333; white-space: nowrap; }
     .red-text { color: #FF0000; }
-    .col-trip { width: 7%; }
-    .col-booking { width: 9%; }
-    .col-origin { width: 7%; }
-    .col-stop { width: 9%; }
-    .col-dest { width: 7%; }
-    .col-ddhd-org { width: 9%; }
-    .col-ddhd-dest { width: 11%; }
-    .col-trailer { width: 8%; }
-    .col-location { width: 33%; }
+    .col-trip { width: 80px; }
+    .col-booking { width: 90px; }
+    .col-origin { width: 70px; }
+    .col-stop { width: 100px; }
+    .col-dest { width: 70px; }
+    .col-ddhd-org { width: 110px; }
+    .col-ddhd-dest { width: 120px; }
+    .col-trailer { width: 85px; }
+    .col-location { width: auto; }
   </style>
 </head>
 <body>
